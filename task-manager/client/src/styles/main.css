@@ -1,0 +1,126 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .app-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.btn.create-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+  user-select: none;
+}
+
+.btn.create-btn:hover {
+  background-color: #115293;
+}
+
+.filter-placeholder {
+  font-size: 1rem;
+  color: #555;
+  min-width: 120px;
+  text-align: center;
+  user-select: none;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  width: 220px;
+  transition: border-color 0.3s ease;
+  user-select: text;
+}
+
+.search-input:focus {
+  border-color: #115293;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.task {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  max-width: 320px;
+  margin: 10px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.task h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.task .description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.status-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  margin-right: 10px;
+  user-select: none;
+}
+
+.status-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-btn:hover {
+  background-color: #45a045;
+}
+
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

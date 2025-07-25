@@ -1,0 +1,55 @@
+@use "sass:string";
+@use "sass:map";
+
+$breakpoints: (
+        'mobile': 0,
+        'tablet': 768px,
+        'desktop': 1024px,
+        'wide': 1440px
+);
+
+@function str-replace($string, $search, $replace: '') {
+  $index: string.index($string, $search);
+  @if $index {
+    @return string.slice($string, 1, $index - 1) + $replace + string.slice($string, $index + string.length($search));
+  }
+  @return $string;
+}
+
+@mixin media($query) {
+  $bp1: '';
+  $bp2: '';
+
+  @if string.index($query, 'between') != null {
+    $query: str-replace($query, 'between ', '');
+    $bp1: string.slice($query, 1, string.index($query, ' and') - 1);
+    $bp2: string.slice($query, string.index($query, 'and') + 4);
+    @media (min-width: map.get($breakpoints, $bp1)) and (max-width: map.get($breakpoints, $bp2) - 1px) {
+      @content;
+    }
+  } @else if string.index($query, '>=') != null {
+    $bp1: str-replace($query, '>=', '');
+    @media (min-width: map.get($breakpoints, $bp1)) {
+      @content;
+    }
+  } @else if string.index($query, '>') != null {
+    $bp1: str-replace($query, '>', '');
+    @media (min-width: map.get($breakpoints, $bp1) + 1px) {
+      @content;
+    }
+  } @else if string.index($query, '<=') != null {
+    $bp1: str-replace($query, '<=', '');
+    @media (max-width: map.get($breakpoints, $bp1)) {
+      @content;
+    }
+  } @else if string.index($query, '<') != null {
+    $bp1: str-replace($query, '<', '');
+    @media (max-width: map.get($breakpoints, $bp1) - 1px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map.get($breakpoints, $query)) {
+      @content;
+    }
+  }
+}

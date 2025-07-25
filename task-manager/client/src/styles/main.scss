@@ -1,0 +1,12 @@
+@use './mixins' as *;
+@use "header";
+@use "_main.scss";
+@use "task";
+@use "popup";
+
+.app-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
