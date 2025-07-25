@@ -2,16 +2,15 @@
 
 A simple task manager app built with **Electron + React (Vite)** on the frontend and **NestJS + PostgreSQL** on the backend.
 
----
+
 
 ##  Project Structure
-
+`
 task-manager/
     ├── client/ # Frontend (React)
     #Frontend (Electron)
 ├── task-manager-server/ # Backend (NestJS + PostgreSQL)
-
----
+`
 
 Setup
 
