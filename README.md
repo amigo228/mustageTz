@@ -31,7 +31,7 @@ npm run dev
 ```
 
 ### Backend
-See [task-manager-server/README.md]([https://www.postgresql.org/](https://github.com/amigo228/mustageTz/blob/master/task-manager-server/README.md)) for full backend setup instructions.
+See [task-manager-server/README.md](https://github.com/amigo228/mustageTz/blob/master/task-manager-server/README.md) for full backend setup instructions.
 
 ### Database
 You need PostgreSQL installed locally (install from [official site](https://www.postgresql.org/download/)) or use Docker to quickly start.
